@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometrical Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Geometrical Calculator</h1>
+        <div class="calculator">
+            <label for="shape">Choose a shape:</label>
+            <select id="shape" onchange="updateProperties()">
+                <option value="">Select a shape</option>
+                <option value="square">Square</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="triangle">Triangle</option>
+                <option value="hexagon">Hexagon</option>
+                <option value="block">Block</option>
+                <option value="rhombus">Rhombus</option>
+                <option value="trapezoid">Trapezoid</option>
+                <option value="squareBlock">Square Block</option>
+                <option value="rectangleBlock">Rectangle Block</option>
+                <option value="pyramid">Pyramid</option>
+                <option value="cup">Cylinder</option>
+                <option value="funnel">Cone</option>
+            </select>
+
+            <div id="property-container" class="hidden">
+                <label for="property">Choose a property to calculate:</label>
+                <select id="property" onchange="updateInputs()">
+                    <!-- Options will be populated dynamically -->
+                </select>
+            </div>
+
+            <div id="input-container" class="hidden">
+                <!-- Input fields will be populated dynamically -->
+            </div>
+
+            <div id="result-container" class="hidden">
+                <button onclick="calculate()">Calculate</button>
+                <div id="result"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
